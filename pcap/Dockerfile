@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
 	vim
 
 RUN echo "set -o vi" >> $HOME/.profile
+RUN echo "export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH" >> $HOME/.profile
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 RUN locale-gen
 
